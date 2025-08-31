@@ -376,6 +376,7 @@ section {
     outline: none;
     opacity: 0;
     transform: translateX(0);
+    color: white;
     background: #604e4e66;
 }
 #contato form.animate input:nth-child(1) {
