@@ -31,6 +31,7 @@ menu.addEventListener('click', () => {
 
 });
 
+
 const contatoForm = document.querySelector('#contato form');
 const contatoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -38,9 +39,22 @@ const contatoObserver = new IntersectionObserver((entries) => {
             contatoForm.classList.add('animate');
         } else {
             contatoForm.classList.remove('animate'); 
-            // se não quiser repetir, basta comentar esta linha
         }
     });
 }, { threshold: 0.3 });
 
 contatoObserver.observe(contatoForm);
+
+const projetos = document.querySelectorAll(".projetos");
+
+const projetosObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+}, { threshold: 0.2 });
+
+projetos.forEach(projeto => projetosObserver.observe(projeto));
