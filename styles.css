@@ -210,12 +210,7 @@ section {
 .sobre-mim.hidden { 
     transform: translateX(-200px); opacity: 0; 
 }
-.sobre-mim h1{
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #f1f5f9;
-}
+
 .sobre-mim p {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.2rem;
@@ -238,7 +233,7 @@ section {
 }
 
 .sobre-mim p strong {
-    color: #60a5fa;
+    color: #3b82f6;
     font-weight: 700;
     font-size: 1.35rem;
 }
@@ -247,26 +242,7 @@ section {
     background: rgba(59, 130, 246, 0.1);
     transform: translateY(-3px);
 }
-/* .sobre-mim p {
-    text-align: justify;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #dbeafe; 
-}
-.sobre-mim:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-} */
 
-/* .sobre-foto {
-    flex: none;
-    display: flex;
-    max-width: 330px;
-    justify-content: flex-end;
-    opacity: 0;
-    transform: translateX(200px);
-    transition: all 0.8s ease;
-} */
  .sobre-foto {
     max-width: 330px;
     background-color: white;
@@ -325,10 +301,7 @@ section {
  }
 }
 @media (max-width: 480px) {
-  .sobre-mim h1 {
-    font-size: 1.8rem;
-  }
-
+  
   .sobre-mim p {
     font-size: 1rem;
   }
@@ -373,6 +346,40 @@ section {
     background: rgba(59, 130, 246, 0.1);
     transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+  #formacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  #formacao h1 {
+    font-size: 1.8rem;
+  }
+
+  #formacao p {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  #formacao h1 {
+    font-size: 1.5rem;
+  }
+
+  #formacao p {
+    font-size: 0.95rem;
+  }
+}
+
 
 #portifolio {
   padding: 80px 20px;
