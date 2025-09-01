@@ -12,6 +12,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Animação de fundo em movimento */
+
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -137,14 +139,17 @@ section {
 .social img:hover {
     transform: scale(1.2);
 }
+
+/* Ajustes para telas até 900px (celulares/tablets) */
 @media (max-width: 900px) {
+    /* Botão do menu em formato de 3 linhas (hambúrguer) */
     .menu {
         display: flex;
         flex-direction: column;
         cursor: pointer;
         gap: 5px;
     }
-
+    /* Lista do menu aparece escondida e depois é aberta */
     .nav-list {
         position: absolute;
         top: 55px;
@@ -155,14 +160,15 @@ section {
         background-color: #0e0d0d;
         padding: 15px;
         gap: 10px;
-        display: none;
+        display: none; /* começa escondida */
         width: 220px;
-        z-index: 1000;
+        z-index: 1000; /* fica por cima */
     }
     .nav-list.active {
-        display: flex;
+        display: flex; /* aparece quando clicada */
         
     }
+    /* Links dentro do menu */
     .nav-list li {
         margin: 0;
         min-width: 120px;
@@ -204,11 +210,15 @@ section {
     transform: translateX(-200px);
     transition: all 0.8s ease;
 }
+
+/* Texto da seção "sobre mim" aparecendo da esquerda */
 .sobre-mim.visible { 
-    transform: translateX(0); opacity: 1; 
+    transform: translateX(0); /* posição normal */
+    opacity: 1; /* aparece */
 }
 .sobre-mim.hidden { 
-    transform: translateX(-200px); opacity: 0; 
+    transform: translateX(-200px); /* vai para a esquerda */
+    opacity: 0; /* some */
 }
 
 .sobre-mim p {
@@ -254,6 +264,7 @@ section {
     transition: all 0.8s ease;
 }
 
+/* Animação de fundo em movimento */
 @keyframes gradientMove {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
@@ -266,21 +277,28 @@ section {
     border-radius: 20px;
     object-fit: cover;
 }
+
+/* Texto da seção "sobre mim" aparecendo da direita */
 .sobre-foto.visible { 
-    transform: translateX(0); opacity: 1; 
+    transform: translateX(0); /* posição normal */
+    opacity: 1; /* aparece */
 }
 .sobre-foto.hidden { 
-    transform: translateX(200px); opacity: 0; 
+    transform: translateX(200px); /* vai para a direita */
+    opacity: 0; /* some */
 }
 
+/* Ajustes para telas até 1024px */
 @media (max-width: 1024px) {
     #sobre { gap: 40px; padding: 60px 20px; }
     .sobre-mim { max-width: 450px; }
     .sobre-foto { max-width: 280px; }
- }    
+ }   
+
+ /* Ajustes para telas até 768px */
 @media (max-width: 768px) {
   #sobre {
-    flex-direction: column;
+    flex-direction: column;/* texto e foto ficam em coluna */
     align-items: center;
     text-align: center;
     gap: 30px;
@@ -300,6 +318,8 @@ section {
     
  }
 }
+
+/* Ajustes para telas bem pequenas até 480px */
 @media (max-width: 480px) {
   
   .sobre-mim p {
@@ -382,16 +402,16 @@ section {
 
 
 #portifolio {
-  padding: 80px 20px;
-  min-height: 100vh;
-  text-align: center;
+    padding: 80px 20px;
+    min-height: 100vh;
+    text-align: center;
 }
 
 #portifolio h1 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #f1f5f9;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #f1f5f9;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 .grid-trabalhos {
@@ -401,91 +421,93 @@ section {
 }
 
 #portifolio {
-  padding: 80px 20px;
-  min-height: 100vh;
-  text-align: center;
+    padding: 80px 20px;
+    min-height: 100vh;
+    text-align: center;
 }
 
 #portifolio h1 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #f1f5f9;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #f1f5f9;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 .grid-trabalhos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .projetos {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s;
-  opacity: 0;
-  transform: translateY(60px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .projetos img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .projetos h2 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  color: #f1f5f9;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #f1f5f9;
 }
 
 .projetos p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #dbeafe;
-  margin-bottom: 10px;
-  text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dbeafe;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
 .projetos span {
-  display: block;
-  font-size: 0.9rem;
-  color: #93c5fd;
-  margin-bottom: 15px;
+    display: block;
+    font-size: 0.9rem;
+    color: #93c5fd;
+    margin-bottom: 15px;
 }
 
 .projetos a {
-  display: inline-block;
-  padding: 10px 15px;
-  color: #fff;
-  background: #2563eb;
-  border-radius: 8px;
-  text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background: #2563eb;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 .projetos a:hover {
-  background: #1e40af;
+    background: #1e40af;
 }
 
 .projetos:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
 
+/* Quando o card de projeto entra na tela (via JS) */
 .projetos.show {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* fica visível */
+  transform: translateY(0); /* volta para a posição normal */
 }
 
+/* Ajustes para telas até 900px (celulares/tablets) */
 @media (max-width: 900px) {
   .projetos img {
     max-height: 150px;
@@ -536,54 +558,72 @@ section {
     color: white;
     background: #604e4e66;
 }
+
+/* Animações no formulário de contato */
+/* Primeiro campo (nome) vem da esquerda */
 #contato form.animate input:nth-child(1) {
     animation: slideLeft 0.8s ease forwards;
     animation-delay: 0.2s;
 }
+
+/* Segundo campo (email) vem da direita */
 #contato form.animate input:nth-child(2) {
     animation: slideRight 0.8s ease forwards;
     animation-delay: 0.4s;
 }
+
+/* Terceiro campo (telefone) vem da esquerda */
 #contato form.animate input:nth-child(3) {
     animation: slideLeft 0.8s ease forwards;
     animation-delay: 0.6s;
 }
+
+/* Caixa de mensagem vem da direita */
 #contato form.animate textarea {
     animation: slideRight 0.8s ease forwards;
     animation-delay: 0.8s;
 }
+
+/* Botão do formulário vem dei baixo, subindo */
 #contato form.animate button {
     animation: slideUp 0.8s ease forwards;
     animation-delay: 1s;
 }
+
+/* Faz o elemento entrar vindo da esquerda */
 @keyframes slideLeft {
     from {
-        opacity: 0;
-        transform: translateX(-100px);
+        opacity: 0; /* começa invisível */
+        transform: translateX(-100px); /* começa deslocado para a esquerda */
     }
     to {
-        opacity: 1;
-        transform: translateX(0);
+        opacity: 1; /* termina visível */
+        transform: translateX(0); /* termina na posição normal */
+
     }
 }
+
+/* Faz o elemento entrar vindo da direita */
 @keyframes slideRight {
     from {
-        opacity: 0;
+        opacity: 0;/* começa invisível */
         transform: translateX(100px);
     }
     to {
-        opacity: 1;
+        opacity: 1;/* termina visível */
         transform: translateX(0);
     }
 }
+
+/* Faz o elemento subir quando aparece */
 @keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(100px); /* começa deslocado para baixo */
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0);/* posição normal */
     }
 }
 #contato input::placeholder,
